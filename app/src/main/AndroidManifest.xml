@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tbook.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+            android:name="com.itcod.tbook.Utils.App"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <meta-data
+                android:name="com.google.android.actions"
+                android:resource="@xml/actions"/>
+
+        <activity
+                android:name="com.itcod.tbook.myapplication.MainActivity"
+                android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.itcod.tbook.myapplication.LoginActivity">
+            <intent-filter>
+                <action android:name="log"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="login" android:scheme="telbook"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.itcod.tbook.myapplication.ContactActivity">
+            <intent-filter>
+                <action android:name="contact"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="contact" android:scheme="telbook"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.itcod.tbook.myapplication.SearchActivity">
+            <intent-filter>
+                <action android:name="search"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="search" android:scheme="telbook"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.itcod.tbook.myapplication.RegisterActivity">
+            <intent-filter>
+                <action android:name="register"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="register" android:scheme="telbook"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

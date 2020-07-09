@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:background="@color/foot_bgcolor"
+    android:scaleType="fitXY"
+    android:alpha="0.7">
+
+    <LinearLayout style="@style/FootItemStyle" android:id="@+id/menu_collect">
+
+        <ImageView
+                style="@style/MenuItemImageViewStyle"
+                android:src="@drawable/collection_ico"/>
+        <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="收藏"/>
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/FootItemStyle" android:id="@+id/menu_contacts">
+
+        <ImageView style="@style/MenuItemImageViewStyle"
+                   android:src="@drawable/contacts_ico"/>
+
+        <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="联系人"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/FootItemStyle" android:id="@+id/menu_setting">
+
+        <ImageView
+            style="@style/MenuItemImageViewStyle"
+            android:src="@drawable/setting"/>
+
+        <TextView
+                style="@style/MenuItemTextViewStyle"
+                android:text="设置"/>
+    </LinearLayout>
+
+</LinearLayout>

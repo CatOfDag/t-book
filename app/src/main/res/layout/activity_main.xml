@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/layout_bg_normal"
+              android:scaleType="fitXY">
+    <include layout="@layout/subgroup_header"
+             android:id="@+id/header"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"/>
+
+    <include layout="@layout/subgroup_net_false"
+             android:layout_weight="1" android:id="@+id/net_404"
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:visibility="gone"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/show_status_view"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:orientation="vertical">
+            <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avi"
+                    style="@style/AVLoadingIndicatorView.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible"
+                    app:indicatorColor="#FF00CCDD"
+                    app:indicatorName="PacmanIndicator" />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_centerInParent="true"
+                      android:text="网络请求中....."/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <com.tbook.reference.framework.CustomerScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_weight="1">
+        <LinearLayout
+                android:id="@+id/scroll_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+        </LinearLayout>
+
+    </com.tbook.reference.framework.CustomerScrollView>
+
+    <include layout="@layout/subgroup_foot" />
+</LinearLayout>

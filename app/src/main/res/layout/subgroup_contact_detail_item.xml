@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+              android:layout_height="75dp"
+              android:id="@+id/contact_telephone_view"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView android:layout_width="45dp"
+                   android:layout_height="match_parent"
+                   android:id="@+id/contact_image"
+                   style="@style/ContactActivityItemTheme_Sign"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/contact_text"
+                  style="@style/ContactActivityItemTheme_TextView"/>
+</LinearLayout>

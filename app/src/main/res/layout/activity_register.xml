@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" >
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/registerView">
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/login_background_map_monning"/>
+    </FrameLayout>
+
+    <include layout="@layout/immerse_bar_view" />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginBottom="80dp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入手机号码"
+                android:drawableRight="@drawable/telephone"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/register_telephone"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="请输入密码"
+                android:drawableRight="@drawable/password_ico"
+                android:ems="10"
+                android:id="@+id/register_password"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="请确认密码"
+                android:drawableRight="@drawable/password_ico"
+                android:ems="10"
+                android:id="@+id/register_password_once_again"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textEmailAddress"
+                    android:hint="请输入邮箱地址"
+                    android:drawableRight="@drawable/email_ico"
+                    android:ems="10"
+                    android:id="@+id/register_email"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/register_get_verification_code"
+                      android:text="获取验证码"
+                      android:background="@drawable/shepe_getver_code"
+                      android:clickable="true"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="15dp">
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/register_confirm_register"
+                    android:background="@drawable/button_skin_style"
+                    android:text="确认注册"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/register_back_login"
+                    android:background="@drawable/button_skin_style"
+                    android:text="返回登录"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
